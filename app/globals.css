@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* Ensure images never exceed their container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Work page hover effect */
+.project-card .hover-box {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover .hover-box {
+  opacity: 1;
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+}
