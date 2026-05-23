@@ -10,7 +10,7 @@ export default function Sidebar() {
   const isActive = (slug: string) => pathname === `/${slug}`;
 
   return (
-    <aside className="fixed left-0 top-0 h-full w-[130px] md:w-[240px] flex flex-col items-center pt-6 md:pt-10 pb-8 overflow-y-auto z-10 bg-white border-r border-neutral-100">
+    <aside className="fixed left-0 top-0 h-full w-[160px] md:w-[240px] flex flex-col items-center pt-6 md:pt-10 pb-8 overflow-y-auto z-10 bg-white border-r border-neutral-100">
       {/* Logo / Name */}
       <Link href="/work" className="text-center mb-6 md:mb-10 block px-2">
         <div className="text-[8px] md:text-[11px] tracking-[0.25em] md:tracking-[0.3em] font-light uppercase leading-relaxed text-neutral-800 hover:text-black transition-colors">
