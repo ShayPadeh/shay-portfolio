@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
       <body className="min-h-full bg-white text-neutral-900 antialiased" style={{ fontFamily: "'Futura', 'Century Gothic', 'Trebuchet MS', sans-serif" }}>
         <Sidebar />
-        <main className="md:ml-[240px] min-h-screen pt-[57px] md:pt-0">
+        <main className="ml-[130px] md:ml-[240px] min-h-screen">
           {children}
         </main>
       </body>
