@@ -22,34 +22,39 @@ export default function WorkPage() {
           <Link
             key={project.slug}
             href={`/${project.slug}`}
-            className="project-card block relative w-full h-screen overflow-hidden"
+            className="project-card block relative w-full overflow-hidden"
+            style={{ height: "100svh" }}
           >
-            {/* Background image or placeholder */}
+            {/* Background image */}
             {hasImage ? (
               <Image
                 src={project.coverImage}
                 alt={project.navTitle}
                 fill
-                className="object-cover"
-                sizes="calc(100vw - 240px)"
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, calc(100vw - 240px)"
                 quality={90}
                 priority
               />
             ) : (
               <div className="absolute inset-0 bg-neutral-100 flex items-center justify-center">
                 <p className="text-[10px] tracking-[0.3em] text-neutral-300 uppercase">
-                  Add cover image →{" "}
-                  <span className="text-neutral-400">
-                    public{project.coverImage}
-                  </span>
+                  Add cover image
                 </p>
               </div>
             )}
 
-            {/* Centered square hover overlay with title */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Mobile: always-visible title at bottom */}
+            <div className="md:hidden absolute inset-x-0 bottom-0 pb-8 pt-16 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center">
+              <h2 className="text-[13px] tracking-[0.2em] font-light text-white text-center px-8">
+                {project.displayTitle}
+              </h2>
+            </div>
+
+            {/* Desktop: hover square overlay */}
+            <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
               <div className="hover-box w-[520px] h-[520px] bg-white/60 flex items-center justify-center">
-                <h2 className="text-2xl md:text-3xl tracking-[0.2em] font-extralight text-neutral-900 text-center px-12">
+                <h2 className="text-3xl tracking-[0.2em] font-extralight text-neutral-900 text-center px-12">
                   {project.displayTitle}
                 </h2>
               </div>
