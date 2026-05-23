@@ -48,13 +48,8 @@ export default function WorkPage() {
 
             {/* Centered square hover overlay with title */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="hover-box w-80 h-80 bg-white/60 flex flex-col items-center justify-center">
-                {project.year && (
-                  <p className="text-[11px] tracking-[0.3em] text-neutral-500 mb-3 font-light">
-                    {project.year}
-                  </p>
-                )}
-                <h2 className="text-2xl md:text-3xl tracking-[0.2em] font-extralight text-neutral-900 text-center px-6">
+              <div className="hover-box w-[520px] h-[520px] bg-white/60 flex items-center justify-center">
+                <h2 className="text-2xl md:text-3xl tracking-[0.2em] font-extralight text-neutral-900 text-center px-12">
                   {project.displayTitle}
                 </h2>
               </div>

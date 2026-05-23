@@ -43,15 +43,15 @@ export default async function ProjectPage({ params }: Props) {
   const images = getProjectImages(slug);
 
   return (
-    <div className="px-16 py-20">
+    <div className="px-5 md:px-16 py-10 md:py-20">
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl tracking-[0.2em] font-extralight text-center mb-10 leading-tight">
+      <h1 className="text-lg md:text-4xl tracking-[0.12em] md:tracking-[0.2em] font-extralight text-center mb-8 md:mb-10 leading-snug">
         {project.displayTitle}
       </h1>
 
       {/* Description */}
       {project.description && (
-        <p className="max-w-2xl mx-auto text-center text-[13px] leading-8 tracking-[0.05em] text-neutral-600 font-light mb-16">
+        <p className="max-w-2xl mx-auto text-center text-[12px] md:text-[13px] leading-7 md:leading-8 tracking-[0.05em] text-neutral-600 font-light mb-10 md:mb-16">
           {project.description}
         </p>
       )}
@@ -67,7 +67,7 @@ export default async function ProjectPage({ params }: Props) {
                 width={1600}
                 height={900}
                 className="w-full h-auto"
-                sizes="(min-width: 240px) calc(100vw - 240px)"
+                sizes="(max-width: 768px) 100vw, calc(100vw - 240px)"
               />
             </div>
           ))}

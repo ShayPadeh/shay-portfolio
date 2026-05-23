@@ -1,6 +1,6 @@
 export default function CVPage() {
   return (
-    <div className="px-16 py-20" dir="rtl">
+    <div className="px-5 md:px-16 py-10 md:py-20" dir="rtl">
       {/* Name & contact */}
       <div className="text-center mb-14">
         <h1 className="text-[15px] tracking-[0.25em] font-medium mb-4">שי פדה</h1>
