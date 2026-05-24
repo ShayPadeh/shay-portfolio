@@ -15,14 +15,14 @@ function imageExists(src: string): boolean {
 
 export default function WorkPage() {
   return (
-    <div className="space-y-2">
+    <div className="md:space-y-0 space-y-[3px]">
       {projects.map((project) => {
         const hasImage = imageExists(project.coverImage);
         return (
           <Link
             key={project.slug}
             href={`/${project.slug}`}
-            className="project-card block relative w-full overflow-hidden h-[62vh] md:h-screen"
+            className="project-card block relative w-full overflow-hidden h-[75vw] md:h-screen"
           >
             {/* Background image */}
             {hasImage ? (
